@@ -1,0 +1,32 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+root {
+    font-family: 'Montserrat';
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-image:url()
+}
+
+.display-4 {
+    color: #000;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.navbar{
+background-color:aquamarine;
+font-weight:500;
+}

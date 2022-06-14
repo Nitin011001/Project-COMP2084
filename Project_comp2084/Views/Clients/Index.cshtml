@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Project_comp2084.Models.Client>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehicle.type)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ClientId" style=" background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:9px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ClientId" style=" background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:9px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ClientId" style=" background-color: coral;
+ border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:9px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -12,5 +12,7 @@ namespace Project_comp2084.Data
         }
         public DbSet<Project_comp2084.Models.Packages>? Packages { get; set; }
         public DbSet<Project_comp2084.Models.Premium>? Premium { get; set; }
+        public DbSet<Project_comp2084.Models.Client>? Client { get; set; }
+        public DbSet<Project_comp2084.Models.Vehicle>? Vehicle { get; set; }
     }
 }

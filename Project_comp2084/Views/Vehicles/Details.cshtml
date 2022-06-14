@@ -1,5 +1,4 @@
-﻿@model Project_comp2084.Controllers.PremiumViewModel
-
+﻿@model Project_comp2084.Controllers.VehicleViewModel
 
 @{
     ViewData["Title"] = "Details";
@@ -8,65 +7,59 @@
 <h1>Details</h1>
 
 <div >
-    <h4>Premium</h4>
+    <h4>Vehicle</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.type)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.type)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.Cost)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.Cost)
         </dd>
     </dl>
-    @if (Model.package.Any())
+    @if (Model.client.Any())
     {
       <table>
           <thead>
               <tr>
                   <th>
-                      PackageName
+                      CompanyName
                   </th>
                   <th>
-                      Price
-                  </th>
-                  <th>
-                      Description
-                  </th>
+                      Location
+                  </th
               </tr>
           </thead>
           <tbody>
-                @foreach(var pack in Model.package)
+                @foreach(var pack in Model.client)
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(modelItem=>pack.PackageName)
+                            @Html.DisplayFor(modelItem=>pack.CompanyName)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem=>pack.Price)
+                            @Html.DisplayFor(modelItem=>pack.Location)
+                        </td
+                        <td>
+                            @Html.ActionLink("Edit","Edit","Packages",new{id=pack.ClientId})
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem=>pack.Description)
+                            @Html.ActionLink("Details","Details","Packages",new{id=pack.ClientId})
                         </td>
                         <td>
-                            @Html.ActionLink("Edit","Edit","Packages",new{id=pack.Id})
-                        </td>
-                        <td>
-                            @Html.ActionLink("Details","Details","Packages",new{id=pack.Id})
-                        </td>
-                        <td>
-                            @Html.ActionLink("Delete","Delete","Packages",new{id=pack.Id})
+                            @Html.ActionLink("Delete","Delete","Packages",new{id=pack.ClientId})
                         </td>
                     </tr>
                 }
             </tbody>
       </table>  
-    }
+    };
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id" style=" width: 100%;

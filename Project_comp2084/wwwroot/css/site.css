@@ -18,12 +18,16 @@ html {
 
 body {
   margin-bottom: 60px;
+  justify-content:center;
+  align-items:center;
   background-image:url()
 }
 
 .display-4 {
     color: #000;
     font-family: 'Montserrat',sans-serif;
+    padding-top:250px;
+
 }
 
 .navbar{

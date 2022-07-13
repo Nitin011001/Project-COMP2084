@@ -15,4 +15,5 @@ thank you for reading this I really appericate that you read this ugly readme
 :)bye
 
 Assignement 3
-my azure membership is expired and my database is connected to azure database my site stopped working now though I am providing the link https://project20220612181702.azurewebsites.net and my local host port number is https://localhost:7189/
+I made some changes in the assignment2 and just hoping that it will run and I code as follwed the pdf and trying to guess that was right.
+my azure membership is expired and my database is connected to azure database my site stopped working now  my local host port number is https://localhost:7189/ thank you

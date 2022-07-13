@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Project_comp2084.Models.Vehicle>
-
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @{
     ViewData["Title"] = "Index";
 }
@@ -37,6 +38,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Cost)
             </td>
+              @if (SignInManager.IsSignedIn(User))
+            {
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id"style=" background-color: #4CAF50;
   border: none;
@@ -72,6 +75,11 @@
   margin: 4px 2px;
   cursor: pointer;">Delete</a>
             </td>
+             }
+            else
+            {
+                <p> You are not LogedIn</p>
+            }
         </tr>
 }
     </tbody>

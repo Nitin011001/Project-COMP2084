@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -45,6 +46,7 @@ namespace Project_comp2084.Controllers
             return View(client);
         }
 
+        [Authorize]
         // GET: Clients/Create
         public IActionResult Create()
         {
@@ -68,7 +70,7 @@ namespace Project_comp2084.Controllers
             ViewData["VehicleId"] = new SelectList(_context.Set<Vehicle>(), "Id", "type", client.VehicleId);
             return View(client);
         }
-
+        [Authorize]
         // GET: Clients/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -121,7 +123,7 @@ namespace Project_comp2084.Controllers
             ViewData["VehicleId"] = new SelectList(_context.Set<Vehicle>(), "Id", "type", client.VehicleId);
             return View(client);
         }
-
+        [Authorize]
         // GET: Clients/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

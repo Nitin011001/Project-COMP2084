@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -44,7 +45,7 @@ namespace Project_comp2084.Controllers
 
             return View(packages);
         }
-
+        [Authorize]
         // GET: Packages/Create
         public IActionResult Create()
         {
@@ -68,7 +69,7 @@ namespace Project_comp2084.Controllers
             ViewData["PremiumId"] = new SelectList(_context.Premium, "Id", "Description", packages.PremiumId);
             return View(packages);
         }
-
+        [Authorize]
         // GET: Packages/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -121,7 +122,7 @@ namespace Project_comp2084.Controllers
             ViewData["PremiumId"] = new SelectList(_context.Premium, "Id", "Description", packages.PremiumId);
             return View(packages);
         }
-
+        [Authorize]
         // GET: Packages/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

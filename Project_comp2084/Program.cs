@@ -14,7 +14,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-
+builder.Services.AddAuthentication().AddGoogle(googleOptions =>
+{
+    googleOptions.ClientId = "178045513924-1ibaeabshuaubqkg2dlli5isqsihr79e.apps.googleusercontent.com";
+    googleOptions.ClientSecret = "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";
+});
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ApplicationDbContext>();

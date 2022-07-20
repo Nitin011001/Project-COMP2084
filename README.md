@@ -13,3 +13,7 @@ I love to watch that how to connected the these tables to the packages
 also I tried change the nav layout to verticle but that doen't work I wish to watch that too ;]
 thank you for reading this I really appericate that you read this ugly readme
 :)bye
+
+Assignement 3
+I made some changes in the assignment2 and just hoping that it will run and I code as follwed the pdf and trying to guess that was right.
+my azure membership is expired and my database is connected to azure database my site stopped working now  my local host port number is https://localhost:7189/ thank you

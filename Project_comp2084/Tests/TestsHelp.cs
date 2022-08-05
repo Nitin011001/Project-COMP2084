@@ -33,7 +33,7 @@ namespace Project_comp2084.Tests
             return jobs;
         }
 
-        protected List<Vehicle> MakeFakeCands(int i)
+        protected List<Vehicle> MakeFakeVehicles(int i)
         {
             var cad = new List<Vehicle>();
             for (int j = 0; j < i; j++)
